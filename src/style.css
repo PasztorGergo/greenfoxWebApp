@@ -24,6 +24,7 @@ p{
 }
 main{
     padding: 3rem 0;
+    width: 100%;
 }
 main .primary{
     display: flex;
@@ -36,4 +37,109 @@ main .primary{
     padding: 0 5em;
     background: #fff;
     height: 500px;
+    box-shadow: 0 .25rem 0.5em #000000a0;
+    position: relative;
+    overflow: hidden;
+}
+main .primary img{
+    position: absolute;
+    width: calc(100% - 10em);
+    height: auto;
+    bottom: 0;
+}
+main .primary::before, main .primary::after{
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f105';
+    font-size: 48px;
+    color: #000000a0;
+    transform: translateY(-50%);
+    top: 50%;
+    cursor: pointer;
+}
+main .primary::before{
+    transform: rotate(180deg) translateY(50%);
+    left: 1rem;
+}
+main .primary::after{
+    right: 1rem;
+}
+#description{
+    padding: 0.5em 1em 1.5em 1em;
+    color: #ffffff;
+    background: #000000a0;
+    z-index: 2;
+}
+#desc-heading{
+    margin-bottom: 1ch;
+}
+#desc-text{
+    color: #c9c9c9;
+}
+.gallery{
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.gallery-photo{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    background: white;
+    box-shadow: 0 .25rem 0.5em #000000a0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-photo::before{
+    background-size: cover;
+    content: '';
+    position: absolute;
+    inset: 0.25em;
+    background-position: center;
+}
+.gallery-photo::after{
+    text-transform: capitalize;
+    position: absolute;
+    top: -2.5em;
+    transform:  scale(0);
+    content: attr(data-title);
+    white-space: nowrap;
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 0.25em 0.5em;
+    z-index: 2;
+    transition: transform 500ms 200ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+}
+.gallery-photo:hover::after{
+    transform: scale(1);
+}
+.tree::before{
+    background-image: url('./images/tree.jpg');
+}
+.cloud:before{
+    background-image: url('./images/boom.jpg');
+}
+.sun::before{
+    background-image: url('./images/sun.jpg');
+}
+.nebula::before{
+    background-image: url('./images/nebula.jpg');
+}
+.eye::before{
+    background-image: url('./images/eye.jpg');
+}
+.girl::before{
+    background-image: url('./images/girl.jpg');
+}
+.something::before{
+    background-image: url('./images/something.jpg');
+}
+.ocean::before{
+    background-image: url('./images/ocean.jpg');
 }
