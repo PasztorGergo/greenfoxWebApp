@@ -47,23 +47,20 @@ main .primary img{
     height: auto;
     bottom: 0;
 }
-main .primary::before, main .primary::after{
+.dec,
+.inc{
     position: absolute;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f105';
-    font-size: 48px;
-    color: #000000a0;
-    transform: translateY(-50%);
     top: 50%;
-    cursor: pointer;
+    font-size: 3rem;
+    color: #000000a0;
+    transform: translate(0, -50%);
+    z-index: 2;
 }
-main .primary::before{
-    transform: rotate(180deg) translateY(50%);
-    left: 1rem;
+.dec{
+    left: 0.5em;
 }
-main .primary::after{
-    right: 1rem;
+.inc{
+    right: 0.5em;
 }
 #description{
     padding: 0.5em 1em 1.5em 1em;
@@ -120,26 +117,26 @@ main .primary::after{
     transform: scale(1);
 }
 .tree::before{
-    background-image: url('./images/tree.jpg');
+    background-image: url('../images/tree.jpg');
 }
 .cloud:before{
-    background-image: url('./images/boom.jpg');
+    background-image: url('../images/boom.jpg');
 }
 .sun::before{
-    background-image: url('./images/sun.jpg');
+    background-image: url('../images/sun.jpg');
 }
 .nebula::before{
-    background-image: url('./images/nebula.jpg');
+    background-image: url('../images/nebula.jpg');
 }
 .eye::before{
-    background-image: url('./images/eye.jpg');
+    background-image: url('../images/eye.jpg');
 }
 .girl::before{
-    background-image: url('./images/girl.jpg');
+    background-image: url('../images/girl.jpg');
 }
 .something::before{
-    background-image: url('./images/something.jpg');
+    background-image: url('../images/something.jpg');
 }
 .ocean::before{
-    background-image: url('./images/ocean.jpg');
+    background-image: url('../images/ocean.jpg');
 }
