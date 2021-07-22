@@ -18,12 +18,11 @@ $('.dec').click(()=>{
     if(pictureIndex === 0)
         pictureIndex = allPhoto.length;
     pictureIndex--;
-    photo.attr('src',allPhoto[pictureIndex].css('background-image'));
-    alert(allPhoto[pictureIndex].css('background-image'));
+    photo.attr('src',`images/${allPhoto[pictureIndex].attr('class').split(' ')[0]}.jpg`);
 });
 $('.inc').click(()=>{
+    pictureIndex++;
     if(pictureIndex === allPhoto.length)
         pictureIndex = 0;
-    pictureIndex++;
-    photo.attr('src',allPhoto[pictureIndex].css('background-image'));
+    photo.attr('src',`images/${allPhoto[pictureIndex].attr('class').split(' ')[0]}.jpg`);
 });

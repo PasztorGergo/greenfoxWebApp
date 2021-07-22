@@ -44,7 +44,7 @@ main .primary{
 main .primary img{
     position: absolute;
     width: calc(100% - 10em);
-    height: auto;
+    height: 100%;
     bottom: 0;
 }
 .dec,
@@ -120,7 +120,7 @@ main .primary img{
     background-image: url('../images/tree.jpg');
 }
 .cloud:before{
-    background-image: url('../images/boom.jpg');
+    background-image: url('../images/cloud.jpg');
 }
 .sun::before{
     background-image: url('../images/sun.jpg');
