@@ -18,6 +18,7 @@ const photoReplace = ()=>{
     allPhoto[pictureIndex].addClass('selected');
 }
 var pictureIndex =  0;
+photoReplace();
 
 $('.dec').click(()=>{
     if(pictureIndex === 0)
